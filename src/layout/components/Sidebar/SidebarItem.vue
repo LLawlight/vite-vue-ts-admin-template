@@ -209,10 +209,4 @@ export default defineComponent({
 .svg-icon {
   margin-right: 16px;
 }
-
-.simple-mode {
-  .svg-icon {
-    margin-left: 20px;
-  }
-}
 </style>

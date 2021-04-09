@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Message, Msgbox } from "element3";
+import { ElMessage, ElMessageBox } from "element-plus";
 import { UserModule } from "@/store/modules/user";
 
 const service = axios.create({
@@ -34,13 +34,13 @@ service.interceptors.response.use(
     // You can change this part for your own usage.
     const res = response.data;
     if (res.code !== 20000) {
-      Message({
+      ElMessage({
         message: res.message || "Error",
         type: "error",
         duration: 5 * 1000,
       });
       if (res.code === 50008 || res.code === 50012 || res.code === 50014) {
-        Msgbox.confirm(
+        ElMessageBox.confirm(
           "You have been logged out, try to login again.",
           "Log out",
           {
@@ -59,7 +59,7 @@ service.interceptors.response.use(
     }
   },
   (error) => {
-    Message({
+    ElMessage({
       message: error.message,
       type: "error",
       duration: 5 * 1000,

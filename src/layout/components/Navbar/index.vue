@@ -16,26 +16,22 @@
           <img :src="avatar" class="user-avatar" />
           <i class="el-icon-caret-bottom" />
         </div>
-        <el-dropdown-menu v-slot:dropdown>
-          <router-link to="/">
-            <el-dropdown-item> Home </el-dropdown-item>
-          </router-link>
-          <a
-            target="_blank"
-            href="https://github.com/armour/vue-typescript-admin-template/"
-          >
-            <el-dropdown-item> Github </el-dropdown-item>
-          </a>
-          <a
-            target="_blank"
-            href="https://armour.github.io/vue-typescript-admin-docs/"
-          >
-            <el-dropdown-item> Docs </el-dropdown-item>
-          </a>
-          <el-dropdown-item divided>
-            <span style="display: block" @click="logout">LogOut</span>
-          </el-dropdown-item>
-        </el-dropdown-menu>
+        <template v-slot:dropdown>
+          <el-dropdown-menu>
+            <router-link to="/">
+              <el-dropdown-item> Home </el-dropdown-item>
+            </router-link>
+            <a
+              target="_blank"
+              href="https://github.com/LLawlight/vue-typescript-vite-admin-template"
+            >
+              <el-dropdown-item> Github </el-dropdown-item>
+            </a>
+            <el-dropdown-item divided>
+              <span style="display: block" @click="logout">LogOut</span>
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
       </el-dropdown>
     </div>
   </div>
@@ -148,9 +144,8 @@ export default defineComponent({
     }
 
     .avatar-container {
-      margin-right: 30px;
-
       .avatar-wrapper {
+        margin-right: 30px;
         margin-top: 5px;
         position: relative;
 

@@ -1,7 +1,7 @@
 import router from "./router";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-import { Message } from "element3";
+import { ElMessage } from "element-plus";
 import { NavigationGuardNext, RouteLocationNormalized } from "vue-router";
 import { UserModule } from "./store/modules/user";
 
@@ -35,7 +35,7 @@ router.beforeEach(
           } catch (err) {
             // Remove token and redirect to login page
             UserModule.ResetToken();
-            Message.error(err || "Has Error");
+            ElMessage.error(err || "Has Error");
             next(`/login?redirect=${to.path}`);
             NProgress.done();
           }

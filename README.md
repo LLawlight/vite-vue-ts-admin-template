@@ -2,7 +2,7 @@
 
 ## 总览
 
-这是一个极简的 vue typescript vite admin 管理后台。它只包含了 Element3 & axios & svgicon & permission control & lint，这些搭建后台必要的东西。
+这是一个极简的 vue typescript vite admin 管理后台。它只包含了 element-plus & axios & svgicon & permission control & lint，这些搭建后台必要的东西。
 
 ## 相关项目
 

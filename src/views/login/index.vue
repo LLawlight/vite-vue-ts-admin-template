@@ -9,7 +9,7 @@
       label-position="left"
     >
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h3 class="title">vue-typescript-vite-admin-template</h3>
       </div>
 
       <el-form-item prop="username">
@@ -79,8 +79,7 @@ import {
 import { LocationQuery, useRoute, useRouter } from "vue-router";
 import { UserModule } from "@/store/modules/user";
 import { isValidUsername } from "@/utils/validate";
-import { IInput } from "element3/types/input";
-import { IForm } from "element3/types/form";
+import { ElInput, ElForm } from "element-plus";
 import userIcon from "@/icons/svg/user.svg";
 import passwordIcon from "@/icons/svg/password.svg";
 import eyeOffIcon from "@/icons/svg/eye-off.svg";
@@ -127,9 +126,9 @@ export default defineComponent({
 
     const passwordType = ref("password");
     const loading = ref(false);
-    const loginFormRef = ref<IForm>();
-    const usernameRef = ref<IInput>();
-    const passwordRef = ref<IInput>();
+    const loginFormRef = ref<typeof ElForm>();
+    const usernameRef = ref<typeof ElInput>();
+    const passwordRef = ref<typeof ElInput>();
 
     let redirect: string | undefined;
     let otherQuery: LocationQuery = {};
@@ -152,9 +151,9 @@ export default defineComponent({
 
     onMounted(() => {
       if (loginForm.username === "") {
-        (usernameRef.value as IInput).focus();
+        (usernameRef.value as typeof ElInput).focus();
       } else if (loginForm.password === "") {
-        (passwordRef.value as IInput).focus();
+        (passwordRef.value as typeof ElInput).focus();
       }
     });
 
@@ -165,12 +164,12 @@ export default defineComponent({
         passwordType.value = "password";
       }
       nextTick(() => {
-        (passwordRef.value as IInput).focus();
+        (passwordRef.value as typeof ElInput).focus();
       });
     };
 
     const handleLogin = () => {
-      (loginFormRef.value as IForm).validate(async (valid: boolean) => {
+      (loginFormRef.value as typeof ElForm).validate(async (valid: boolean) => {
         if (valid) {
           try {
             loading.value = true;
