@@ -30,6 +30,33 @@ export default [
     ],
   },
   {
+    path: "/example",
+    component: Layout,
+    redirect: "/example/tree",
+    meta: {
+      title: "Example",
+      icon: "example",
+    },
+    children: [
+      {
+        path: "tree",
+        component: () => import("@/views/tree/index.vue"),
+        meta: {
+          title: "Tree",
+          icon: "tree",
+        },
+      },
+      {
+        path: "table",
+        component: () => import("@/views/table/index.vue"),
+        meta: {
+          title: "Table",
+          icon: "table",
+        },
+      },
+    ],
+  },
+  {
     path: "/:pathMatch(.*)*",
     redirect: "/404",
     meta: { hidden: true },
