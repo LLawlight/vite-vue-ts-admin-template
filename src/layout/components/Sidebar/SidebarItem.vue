@@ -21,9 +21,9 @@
             :data="icons[String(theOnlyOneChild.meta.icon)]"
             original
           />
-          <template v-if="theOnlyOneChild.meta.title" v-slot:title>{{
-            theOnlyOneChild.meta.title
-          }}</template>
+          <template v-if="theOnlyOneChild.meta.title" v-slot:title>
+            <span>{{ theOnlyOneChild.meta.title }}</span>
+          </template>
         </el-menu-item>
       </sidebar-item-link>
     </template>
@@ -190,8 +190,6 @@ export default defineComponent({
       overflow: hidden;
 
       & > .el-submenu__title {
-        padding: 0px !important;
-
         .el-submenu__icon-arrow {
           display: none;
         }
