@@ -1,0 +1,1 @@
+import{d as e,r as s,o as t,c as a,k as n}from"./vendor.8e5c2465.js";var r=e({name:"Menu1-3"});const o={style:{padding:"30px"}};r.render=function(e,r,c,d,l,u){const i=s("el-alert");return t(),a("div",o,[n(i,{closable:!1,title:"menu 1-3",type:"success"})])};export default r;
