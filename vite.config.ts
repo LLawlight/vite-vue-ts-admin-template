@@ -6,6 +6,10 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base:
+    process.env.NODE_ENV === "production"
+      ? "/vite-vue-ts-admin-template/"
+      : "/",
   css: {
     preprocessorOptions: {
       scss: {
