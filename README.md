@@ -1,4 +1,4 @@
-# vue-typescript-admin-template
+# vite-vue-ts-admin-template
 
 ## 总览
 

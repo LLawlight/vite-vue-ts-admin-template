@@ -9,7 +9,7 @@
       label-position="left"
     >
       <div class="title-container">
-        <h3 class="title">vue-typescript-vite-admin-template</h3>
+        <h3 class="title">vite-vue-ts-admin-template</h3>
       </div>
 
       <el-form-item prop="username">

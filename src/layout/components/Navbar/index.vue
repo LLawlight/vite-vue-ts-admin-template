@@ -23,7 +23,7 @@
             </router-link>
             <a
               target="_blank"
-              href="https://github.com/LLawlight/vue-typescript-vite-admin-template"
+              href="https://github.com/LLawlight/vite-vue-ts-admin-template"
             >
               <el-dropdown-item> Github </el-dropdown-item>
             </a>
