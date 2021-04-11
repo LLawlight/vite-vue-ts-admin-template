@@ -21,11 +21,14 @@ export function useResize() {
     return AppModule.sidebar;
   });
 
-  watch(route, () => {
-    if (device.value === DeviceType.Mobile && sidebar.value.opened) {
-      AppModule.CloseSideBar(false);
+  watch(
+    () => route.path,
+    () => {
+      if (device.value === DeviceType.Mobile && sidebar.value.opened) {
+        AppModule.CloseSideBar(false);
+      }
     }
-  });
+  );
 
   onBeforeMount(() => {
     window.addEventListener("resize", resizeHandler);

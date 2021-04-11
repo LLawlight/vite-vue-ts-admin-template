@@ -35,14 +35,6 @@ export default defineComponent({
 
     const breadcrumbs = ref<BreadcrumbItem[]>([]);
 
-    watch(route, () => {
-      // if you go to the redirect page, do not update the breadcrumbs
-      if (route.path.startsWith("/redirect/")) {
-        return;
-      }
-      getBreadcrumb();
-    });
-
     const getBreadcrumb = () => {
       let matched: BreadcrumbItem[] = route.matched.filter(
         (item) => item.meta && item.meta.title
@@ -81,6 +73,20 @@ export default defineComponent({
       }
       router.push(pathCompile(path));
     };
+
+    watch(
+      () => route.path,
+      () => {
+        // if you go to the redirect page, do not update the breadcrumbs
+        if (route.path.startsWith("/redirect/")) {
+          return;
+        }
+        getBreadcrumb();
+      },
+      {
+        immediate: true,
+      }
+    );
 
     return {
       breadcrumbs,
