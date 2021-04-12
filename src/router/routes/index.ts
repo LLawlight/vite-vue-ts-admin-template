@@ -62,8 +62,7 @@ export default [
     children: [
       {
         path: "index",
-        component: () =>
-          import(/* webpackChunkName: "form" */ "@/views/form/index.vue"),
+        component: () => import("@/views/form/index.vue"),
         meta: {
           title: "Form",
           icon: "form",
@@ -131,6 +130,8 @@ export default [
     children: [
       {
         path: "https://llawlight.github.io/vite-vue-ts-admin-template",
+        // 一个标准的 `RouteRecordRaw` 必须具有 `component` 或者 `redirect`
+        redirect: "",
         meta: {
           title: "External Link",
           icon: "link",
