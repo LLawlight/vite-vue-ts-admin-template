@@ -1,0 +1,14 @@
+ls:
+  src:
+    .js: kebab-case
+    .ts: kebab-case
+    .scss: snakecase|kebab-case
+    .d.ts: kebab-case
+    .scss.d.ts: snakecase|kebab-case
+
+  src/views:
+    .dir: kebab-case
+
+  src/**/components/**/*:
+    .dir: PascalCase
+    .vue: lowercase|PascalCase

@@ -19,13 +19,13 @@
     "nprogress": "^0.2.0",
     "path-browserify": "^1.0.1",
     "path-to-regexp": "^6.2.0",
-    "vite-plugin-svgicon": "^1.0.0-alpha.0",
     "vue": "^3.0.11",
     "vue-router": "^4.0.6",
     "vuex": "^4.0.0",
     "vuex-module-decorators": "^1.0.1"
   },
   "devDependencies": {
+    "@ls-lint/ls-lint": "^1.9.2",
     "@types/js-cookie": "^2.2.6",
     "@types/node": "^14.14.37",
     "@types/nprogress": "^0.2.0",
@@ -46,7 +46,8 @@
     "stylelint-prettier": "^1.2.0",
     "typescript": "^4.2.4",
     "vite": "^2.1.5",
-    "vite-plugin-style-import": "^0.9.2"
+    "vite-plugin-style-import": "^0.9.2",
+    "vite-plugin-svgicon": "^1.0.0-alpha.0"
   },
   "homepage": "https://LLawlight.github.io/vite-vue-ts-admin-template",
   "license": "MIT"
