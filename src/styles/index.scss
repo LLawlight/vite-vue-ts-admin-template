@@ -1,7 +1,7 @@
 // @import './variables.scss'; // Already imported in style-resources-loader
 // @import './mixins.scss'; // Already imported in style-resources-loader
-@import './transition.scss';
-@import './svgicon.scss';
+@import "./transition.scss";
+@import "./svgicon.scss";
 
 /* Global scss */
 
@@ -9,7 +9,8 @@ body {
   height: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue,
+    Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 }
 
 html {
